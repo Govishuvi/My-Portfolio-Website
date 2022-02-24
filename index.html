@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>PORTFOLIO</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<style>
+		*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat",sans-serif;
+    
+}
+
+        nav{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: blue;
+    margin: 0px;
+    padding-top: 10px;
+}
+.mainmenu{
+    display: flex;
+    list-style: none;
+    padding-top: 10px;
+}
+nav .mainmenu  li a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    transition: color .5s ease;
+}
+nav .mainmenu  li a:hover{
+    color: crimson;
+}
+nav .openmenu{
+    font-size: 35px;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+nav .mainmenu .closemenu {
+    color: white;
+    font-size: 35px;
+    display: none;;
+    cursor: pointer;
+}
+nav .logo{
+    margin: 6px;
+    font-size: 28px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+@media(max-width:1000px)
+{
+    nav .mainmenu li a{
+        font-size: 20px;
+        padding-left: 10px;
+    }
+}
+
+@media(max-width:850px)
+{
+    /* Home page */
+
+    nav .mainmenu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .mainmenu li a{
+        margin: 10px;
+    }
+    nav .mainmenu .closemenu{
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+    nav .openmenu{
+        display: block;
+    }
+ }
+
+.footer{
+    width: 100%;
+    height: 100%;
+    background-color: #FF0000;
+    padding: 30px 0 20px 0;
+}
+.footer .social{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer .social a i{
+	font-size: 50px;
+	color: white;
+}
+
+.footer .social a .fa-hackerrank:hover{
+	color:rgb(25, 241, 25);;
+}
+.footer .social a .fa-instagram:hover{
+    color: #ee3390;
+}
+.footer .social a .fa-linkedin:hover{
+    color: #1050cf;
+}
+.footer .social a .fa-github:hover{
+    color: #000;
+}
+.footer .social a .fa-s:hover{
+    color: #2ECCFA;
+}
+
+@media(min-width:800px)
+{
+	.footer{
+		width: 100%;
+	}
+	.footer .social{
+		margin-right: 30px;
+	}
+	.footer .social a i{
+		font-size: 40px;
+	}
+}
+
+@media(max-width:800px)
+{
+    .footer{
+        width: 100%;
+    }
+    .footer .social {
+        margin-right: 15px;
+    }
+    .footer .social a i{
+        font-size: 40px;
+    }
+    
+}
+.img1{
+	margin-left: 50px;
+	width: 300px;
+	height: 200px;
+}
+
+#skills{
+	padding-bottom: 35px;
+	padding-left: 20px;
+	list-style-position: inside;
+}
+.about-text{
+	padding-left: 50px;
+	font-size: 22px;
+	font-weight: 400;
+	word-spacing: 3px;
+	text-align: left;
+}
+.img{
+	margin-left: 50px;
+}
+#about{
+	padding-bottom: 35px;
+}
+#education{
+	padding-bottom: 10px;
+}
+#education ul{
+	list-style-position: outside;
+	padding-left: 50px;
+}
+#education ul li{
+	padding-bottom: 15px;
+	font-size: 24px;
+	
+}
+.table{
+	width: 500px;
+	height: 350px;
+	margin-left: 30px;
+	padding-left: 10px;
+}
+#contact{
+	padding-bottom: 35px;
+}
+.box{
+	height: 30px;
+}
+.textbox{
+	border-radius: 30px;
+	box-shadow: 5px 5px 5px rgb(215, 223, 104);
+	transition: background-color .3s ease-in;
+	font-size: 14px;
+	padding: 3px 5px;
+}
+.textbox:hover{
+	background-color: lightskyblue;
+}
+.btn{
+	border-radius: 30px;
+	padding: 10px;
+	background-color: lightblue;
+	transition: all .5s ease ease-out;
+}
+.btn:hover{
+	box-shadow: 3px 3px 5px rgb(129, 129, 236);
+	background-color: lightskyblue;
+}
+.txt1{
+	text-align: center;
+	margin-top: 15px;
+}
+.txt2{
+	text-align: center;
+	padding-bottom: 15px;
+}		
+
+/* Media queries */
+
+@media(max-width:700px)
+{
+	/* About */
+	#about{
+		width: 100%;
+	}
+	.aboutme{
+		max-width: 300px;
+	}
+    .img{
+		width: 200px;
+		height: 200px;
+		margin-left: 20px;
+	}
+	.about-text{
+		padding: 20px 25px ;
+	}
+
+	/* About */
+
+	/* skills */ 
+	#skills{
+		width: 100%;
+	} 
+	.img1{
+		width: 270px;
+		height: 230px;
+		margin-right: 15px;
+	}
+	/* skills */
+
+	/* #contact{
+		width:80%;
+		margin-right: 0;
+		padding-right:0 ;
+	}
+	#my-form{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	.contacttext{
+		text-align: center;
+		font-size: 40px;
+	}
+	.textbox{
+		display: block;
+		margin: 15px;
+		width: 200px;
+	} */
+
+}
+@media(max-width:500px)
+{
+	/* About */
+	.about{
+		width: 100%;
+	}
+	.aboutme{
+		max-width: 300px;
+	}
+    .img{
+		width: 120px;
+		height: 150px;
+		margin-left: 10px;
+	}
+	.about-text{
+		padding: 20px 10px ;
+	}
+	.img1{
+		width: 150px;
+		height: 120px;
+	}
+
+	/* About */
+
+}
+
+/* Media queries */
+
+.contact{
+    width: 100%;
+    height: 100%;
+    background-color: #101010;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.contact .form{
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    margin:  0 20px;
+    align-items: center;
+    justify-content: center;
+}
+.contact .form .textbox{
+    width: 420px;
+    background-color: #191919;
+    color: white;
+    margin: 20px;
+    height: 50px;
+    border-radius: 30px;
+    padding: 15px;
+    border: none;
+    transition: all .5 ease;
+    font-size: 20px;
+}
+.contact .form .textarea{
+    height: 120px;
+}
+.contact .form .textbox:hover{
+    opacity: .5;
+    border: 1px solid white;
+    box-shadow: 0px 0px 5px #fff;
+}
+.contact .form .textbox:hover::placeholder{
+    color: rgb(252, 249, 249);
+}
+.contact .form .textbox::placeholder{
+    font-size: 18px;
+    color: rgb(148, 142, 142);
+    
+}
+.contact .form .btn{
+    width :180px;
+    padding: 10px;
+    margin-top: 40px;
+    
+}
+
+@media(max-width:500px) {
+    
+
+    /* contact us */
+
+    .contact{
+        width: 100%;
+    }
+    .contact .form{
+        width: 350px;
+        margin: 50px;
+    }
+    .contact .form .textbox{
+        width: 300px;
+    }
+    
+}
+.contact{
+	background-color: rgb(190, 187, 187);
+	padding-bottom: 20px;
+}
+.title h2{
+	color: black;
+	font-weight: 800;
+	font-size: 50px;
+}
+.btn{
+	margin-bottom: 20px;
+}
+	</style>
+
+
+
+</head>
+
+<body>
+	<!--Header(start)-->
+	<div class="home" id="home">
+        <nav>
+            <div class="logo">
+                <h1>Portfolio</h1>
+            </div>
+            <div class="openmenu"><i class="fa fa-bars"></i></div>
+                <ul class="mainmenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact ">Contact Us</a></li>
+                    <div class="closemenu"><i class="fa fa-times"></i></div>
+                    
+                </ul>
+            </div>
+        </nav>
+    </div>
+	<!--Header(end)-->
+
+	<!--Home(start)-->
+	<table id="home" border="1" width="100%"
+		cellpadding="30" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="90%" align="center">
+					<tr>
+						<td align="center" valign="middle">
+							<h3>
+								<font face="Times New Roman"
+									size="6" color="#ffffff">
+									Hi! I AM GOVINDA SHUVILESH.B
+								</font>
+							</h3>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Home(end)-->
+
+
+	<!--About(start)-->
+	<table id="about" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center"
+							valign="middle" colspan="2">
+							<font face="Verdana" size="7"
+								color="#4CAF50">
+								About Me
+							</font>
+							<hr color="#4CAF50" width="90">
+						</td>
+					</tr>
+                    <div class="aboutme"></div>
+					<tr>
+						
+						<td width="40%">
+							<img src="img.png" class="img">
+						</td>
+
+						<td width="60%">
+							<font face="Verdana" size="4"
+								color="white" >
+								<p class="about-text">I am Govinda Shuvilesh. I am studying in second year CSE in Velammal Engineering College. I am learning web development.I am doing my internship with Vbind innovations,Chennai.
+								This is my first website.</p>
+								<hr color="black">
+
+							<p class="about-text">I am efficient in C-Language,
+								C++ and Python. </p>
+								<hr color="black">
+
+								<p class="about-text">Thanks for reading this.</p>
+							</font>
+						</td>
+					</tr>
+				</div>
+				</table>
+				<hr color="black">
+				<hr color="black">
+				<hr color="black">
+			</td>
+		</tr>
+	</table>
+	<!--About(end)-->
+
+
+	<!--Skills(start)-->
+	<table id="skills" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="#80ff00">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center"
+							valign="middle" colspan="2">
+							<font face="Verdana" size="7"
+								color="black">
+								Skills
+							</font>
+							<hr color="black" width="90">
+						</td>
+					</tr>
+
+					<tr>
+						<td height="10">
+							<font face="Times New Roman"
+								size="5" color="black">
+								<ul class="list">
+									<li>
+										C
+										<hr color="#c2c0c3">
+										
+									</li>
+
+									<li>
+										C++
+										<hr color="#c2c0c3">
+										
+									</li>
+
+									<li>
+										Python
+										<hr color="#c2c0c3">
+										
+									</li>
+									<li>
+										Java
+										<hr color="#c2c0c3">
+										
+									</li>
+
+									<li>
+										HTML
+										<hr color="#c2c0c3">
+										
+									</li>
+									<li>
+										CSS
+										<hr color="#c2c0c3">
+										
+									</li>
+									<li>
+										Data Structures
+										<hr color="#c2c0c3">
+										
+									</li>
+		
+								</ul>
+							</font>
+						</td>
+
+						<td width="45%">
+							<img src="img1.png"  class="img1" alt="Project" width="75%">
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Skills(end)-->
+
+	<!--Education(start)-->
+	<table id="education" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center" valign="middle">
+							<font face="Verdana" size="7" color="#ff9933">
+								Education
+								<hr color="#4CAF50" width="100">
+							</font>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<font face="Verdana" size="4" color="white">
+								<ul>
+									<li>
+										<b>Velammal Engineering College,Surapet</b>
+										<ul>
+											<li>
+												July,2020 - Present.
+											</li>
+											<li>
+												B.E(Computer Science Engineering)
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										
+										<b>Sethu Bhaskara Matriculation Higher Secondary School,Pudur</b>
+										<ul>
+											<li>
+												Higher secondary education
+											</li>
+											<li>
+												2020
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										
+										<b>Kalaimagal Matriculation Higher Secondary School,Thirumullaivoyal</b>
+										<ul>
+											<li>
+												10th standard
+											</li>
+											<li>
+												2018
+											</li>
+											
+
+										</ul>
+									</li>
+
+								</ul>
+
+							</font>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Education(end)-->
+
+
+	<!-- Contact(start)-->
+
+
+
+		 <section class="contact" id="contact">
+        <div class="title">
+            <h2>Contact us</h2>
+        </div>
+        <!-- <div id="status" ></div> -->
+        <div class="main">
+       
+			<form class="form" id="my-form" action="https://formspree.io/f/myyowadw" method="post">
+				<input type="text" name="Name" id="name" placeholder="Enter Name" class="textbox" required>
+				<input type="email" name="Email" id="email" placeholder="Enter E-mail" class="textbox" required>
+				<input type="number" name="Phonenumber" id="phone" placeholder="Enter phone number" class="textbox" required>
+				<textarea  id="message" name="Message"  rows="10" class="textbox textarea" placeholder="Enter message " required></textarea>
+				<input type="submit" value="Submit" class="btn">
+			</form>
+		</div>
+		<!-- </section>
+	<table id="contact" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="#3333ff">
+		<tr> --> 
+			<!-- <td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="90%" align="center">
+					<tr>
+						<td height="180" align="center"
+							valign="middle" colspan="2">
+							<font face="Verdana" size="7"
+								color="black" class="contacttext">
+								Contact Us
+							</font>
+							
+						</td>
+					</tr>
+
+					<tr>
+						<td align="center" valign="top">
+							<form action="https://formspree.io/f/myyowadw" method="post" id="my-form">
+							<table class="table" border="0" width="90%" cellpadding="15"
+								cellspacing="0" align="center" bgcolor="black">
+								<tr>
+									<td width="30%">
+										<hr color="black">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											Name
+										</font>
+									</td>
+									<td width="70%">
+                                        <hr color="black">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											<input class="textbox box" name="Name" type="text" size="40" required>
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											Email
+										</font>
+									</td>
+									<td width="70%">
+                                        <hr color="black">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											<input class="textbox box" name="E-mail" type="email" size="40 required">
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											Number
+										</font>
+									</td>
+									<td width="70%">
+                                        <hr color="black">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											<input class="textbox box" name="Number" type="number" size="12" required>
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											Feedback
+										</font>
+									</td>
+									<td width="70%">
+                                        <hr color="black">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											<textarea class="textbox" rows="5" name="Feedback" required
+												cols="37">
+											</textarea>
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%">
+										
+									</td>
+									<td width="70%">
+                                       
+										<button class="btn" type="Submit">
+											<font face="Verdana"
+												size="4" color="black">
+												<b>Submit</b>
+											</font>
+										</button>
+										
+									</td>
+								</tr>
+							</table >
+						</form>
+						</td>
+
+					</tr>
+					<tr>
+						<td colspan="2">
+							
+							
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	Contact(end) -->
+	
+
+<!--Footer1(start)-->
+<section class="footer">
+ <div class="social">
+            <a href="https://instagram.com/shuvi_govi?utm_medium=copy_link" target="_blank"><i class="fab fa-instagram"></i></a> 
+            <a href="https://www.linkedin.com/in/govinda-shuvilesh-b-298a63213" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Govishuvi" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.hackerrank.com/govindashuviles1" target="_blank"><i class="fa-brands fa-hackerrank"></i></a>
+			<a href="http://intern.skillrack.com/profile/345519/8ae5d163dccce403354a2e9c020ee260a8154775" target="_blank"><i class="fa-solid fa-s"></i></a>
+        </div>
+    </section>
+	 
+
+	<!--Footer2(start)-->
+    <table id="footer" border="0" width="100%"
+        cellpadding="0" cellspacing="0" bgcolor="yellow">
+        <tr>
+            <td>
+                <table border="0" cellpadding="15"
+                    cellspacing="0" width="90%" align="center">
+                    <tr>
+                        <td width="80%" valign="top">
+                            <font face="Verdana"
+                                color="#FF0000" size="5">
+                                <p class="txt1">Thanks for reading.</p><br>
+								<p class="txt2">Copyrights &copy 2022. All rights are reserved.</p>
+                            </font>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!--Footer2(end)-->
+  <script >
+const mainMenu = document.querySelector('.mainmenu');
+const openMenu = document.querySelector('.openmenu');
+const closeMenu = document.querySelector('.closemenu');
+
+var x=document.getElementsByTagName('a');
+
+openMenu.addEventListener('click',show);
+closeMenu.addEventListener('click',close);
+
+function show()
+{
+    mainMenu.style.display='flex';
+    mainMenu.style.top='0';
+}
+
+function close()
+{
+    mainMenu.style.top="-120%";
+}
+
+for(var i=0;i<5;i++)
+{
+    x[i].addEventListener('click',close);
+}
+var form = document.getElementById("my-form");
+
+
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+            form.reset();
+            alert("Thanks for your submission");
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+                alert(data["errors"].map(error => error["message"]).join(", "));
+            } else {
+                alert("There was a problem in submitting your form");
+            }
+          })
+        }
+      }).catch(error => {
+        alert("There was a problem in submitting your form");
+      });
+    }
+    form.addEventListener("submit", handleSubmit);
+
+        </script>
+
+</body>
+
+</html>
